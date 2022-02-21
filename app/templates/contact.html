@@ -3,22 +3,22 @@
 
 {% block main %}
 <h2>Contact Form</h2>
-<div class='form'>
+<div class='form-group'>
     <form action="{{url_for('contact')}}" method="post">
     {{form.csrf_token}}
-        <div class="form-secs">
+        <div class="form-group">
             {{form.name.label}}
             {{form.name(class='name',placeholder="Please enter your full name")}}
         </div>
-        <div class = "form-secs">
+        <div class = "form-group">
             {{form.email.label}}
             {{form.email(class='email',placeholder="Please enter e-mail address")}}
         </div>
-        <div class="form-secs">
+        <div class="form-group">
             {{form.subject.label}}
             {{form.subject(class='subject',placeholder = "Please enter the subject for your message")}}
         </div>
-        <div class = "form-secs">
+        <div class = "form-group">
             {{form.message.label}}
             {{form.message(class='message',placeholder = "Please enter the message you would like to enter")}}
         </div>

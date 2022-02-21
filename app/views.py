@@ -42,8 +42,9 @@ def contact():
             msg.body = message
             mail.send(msg)
 
-            return redirect({{url_for('home')}})
             flash('You have filled out the form successfully')
+            return redirect('/')
+            
             
     return render_template('contact.html',form = form)
 
